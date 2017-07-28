@@ -1,54 +1,48 @@
 # Yuxi Global - Angular Test
 
-## Introduction
+## 1. Introduction
 
 In this test you will be asked to build a set of functionalities in Angular. You will be provided a set of **mockups** and a **base project** we have already setup for you in this repository. 
 
 > We will review your submission following the evaluation criteria, make sure you don't miss it!
 
-## Challenge Definition
+## 2. Challenge Definition
 
 You must build the following interface using the base project:
 
-### Team Challenges
 ![Team Challenges](screenshots/team-challenges.png)
 
-### My Challenges
-![My Challenges](screenshots/my-challenges.png)
-
-### Data Layer
+## 3. Data Layer
 
 The data associated with the mockups is attached in this repository as `json` files. Take a look at the `assets/fake-data` folder. You must use the Angular HTTP Module to fetch the information from the `.json` files.
 
-## Base Project
+## 4. Base Project
 
-The base project (you will use as starting point) is hosted in this repository and it's deployed [here](https://jdjuan.github.io/yuxi-global-angular-test/)
+The base project (you will use as starting point) is hosted in this repository and it's deployed [here](https://jdjuan.github.io/yuxi-global-angular-test/). The red square is where we want to see the functionality you build.
 
 ![My Challenges](screenshots/solution-area.png)
 
-The red square is where we want to see the functionality you build.
-
-## Evaluation Criteria
+## 5. Evaluation Criteria
 
 Category          | Percentage   |
 :----------------:|:------------:|
-1. Creativity        |     50%      |
-2. Code Quality      |     30%      |
-3. Browser Support   |     20%      |
+|1. Creativity        |     50%      |
+|2. Code Quality      |     30%      |
+|3. Browser Support   |     20%      |
 
-### 1. Creativity
+### 5.1 Creativity
 
 We'd love to see if you are capable of coming up with a more usable and intuitive interface. A completely new looking version of the existing. Maybe you would get rid of the tabs, or perhaps the ellipsis. It's your call. Whatever that makes us say: "Wow!"
 
-### 2. Code Quality
+### 5.2 Code Quality
 
 How readable, clean and modular is your code? Are you using the best practices?
 
-### 3. Browser Support
+### 5.3 Browser Support
 
 We don't want to leave any browser behind, make sure your website renders correctly in Edge and IE11.
 
-## Setup your development environment
+## 6. Setup your development environment
 
 If you don't have a GitHub account, you must create one.
 
@@ -59,7 +53,7 @@ If you don't have a GitHub account, you must create one.
 5. Now you should see [this](https://jdjuan.github.io/yuxi-global-angular-test/) in your local machine
 6. You are all setup and ready to start
 
-## Delivery Conditions
+## 7. Delivery Conditions
 
 Your solution should be delivered through the forked GitHub repository. It should meet the following conditions:
 
@@ -69,15 +63,15 @@ Your solution should be delivered through the forked GitHub repository. It shoul
 
 > If deploying to GitHub pages remember to use the command: `ng build --prod --aot -bh ./`
 
-## Deadline
+## 8. Deadline
 
 The solution must be submitted and uploaded in your repository before Tuesday, August 2nd at 11:59 a.m.
 
-## Additional Notes
+## 9. Additional Notes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.6.
 
-### Third-party libraries
+### 9.1 Third-party libraries
 
 You are free to use third-party libraries as long as you have a good reason for it.
 
@@ -85,7 +79,7 @@ You are free to use third-party libraries as long as you have a good reason for 
 ---
 
 
-# Fake Data: How to read it
+# Data Layer
 
 The following is a description of every single data shown in the interface 
 
@@ -115,7 +109,7 @@ The **Challenges to Complete** value is the number of all the challenges whose `
 
 ## 2. Team Challenges
 
-![Team Challenges](screenshots/team-challenges.png)
+![Team Challenges](screenshots/team-challenges-only.png)
 
 ### 2.1 Pending to Review
 
@@ -141,7 +135,7 @@ The ellipsis button opens the following options. Don't worry, such buttons don't
 
 ## 3. My Challenges
 
-![My Challenges](screenshots/my-challenges.png)
+![My Challenges](screenshots/my-challenges-only.png)
 
 ### 3.1 Created By
 
