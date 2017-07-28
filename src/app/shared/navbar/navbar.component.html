@@ -1,0 +1,23 @@
+<nav>
+  <ul>
+    <li><img src="./assets/img/logo.jpg" alt=""></li>
+    <li><button md-button class="home">Home</button></li>
+    <li><button md-button class="content">My Content</button></li>
+    <li><button md-button class="favorites">Favorites</button></li>
+    <li><button md-button class="learning">Learning</button></li>
+    <li><button md-button class="coaching active">Coaching</button></li>
+    <li><button md-button class="reporting">Reporting</button></li>
+    <li><button md-button class="insights">Insights</button></li>
+    <li class="right">
+      <button md-button [mdMenuTriggerFor]="menu" class="user-login"></button>
+      <md-menu #menu="mdMenu" yPosition="below" [overlapTrigger]="false">
+        <button md-menu-item class="edit">Edit Profile</button>
+        <button md-menu-item class="administration">Administration</button>
+        <button md-menu-item class="help">Help & Training</button>
+        <button md-menu-item class="support">Support</button>
+        <button md-menu-item class="customer">Customer Hub</button>
+        <button md-menu-item class="logout">Logout</button>
+      </md-menu>
+    </li>
+  </ul>
+</nav>
