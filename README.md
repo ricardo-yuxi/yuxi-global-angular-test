@@ -65,7 +65,7 @@ Your solution should be delivered through the forked GitHub repository. It shoul
 
 ## 8. Deadline
 
-The solution must be submitted and uploaded in your repository before Tuesday, August 2nd at 11:59 a.m.
+The solution must be submitted and uploaded in your repository before Tuesday, August 1st at 11:59 a.m.
 
 ## 9. Additional Notes
 
