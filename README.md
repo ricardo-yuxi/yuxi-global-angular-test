@@ -111,20 +111,20 @@ The **Challenges to Complete** value is the number of all the challenges whose `
 
 ![Team Challenges](screenshots/team-challenges-only.png)
 
-### 2.1 Pending to Review
+### 2.1 Invited
+
+The `Invited` value can be taken from the `numberInvited` property.
+
+### 2.2 Entries
+
+The `Entries` value can be taken from the `numberOfEntries` property.
+
+### 2.3 Pending to Review
 
 The challenges **Pending to Review** are shown according to the property `numberToReview` which is present on each item of the `TeamChallenges.json`
 
 ![Pending](screenshots/pending-1.png)
 ![Pending](screenshots/pending-2.png)
-
-### 2.2 Invited
-
-The `Invited` value can be taken from the `numberInvited` property.
-
-### 2.3 Entries
-
-The `Entries` value can be taken from the `numberOfEntries` property.
 
 ### 2.4 Ellipsis Button
 
