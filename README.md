@@ -89,48 +89,78 @@ You are free to use third-party libraries as long as you have a good reason for 
 
 The following is a description of every single data shown in the interface 
 
-## Dashboard Summary
+## 1. Dashboard Summary
 
 This holds general information for the whole application using graphics.
 
 ![Dashboard Summary](screenshots/graphics.png)
 
-### Entries to review
+### 1.1 Entries to review
 
-This is the result of calculating the sum of all the entries (`numberOfEntries`) of all the Team Challenges.
+This is the result of calculating the sum of all the entries (`numberOfEntries`) of all the Team Challenges (`TeamChallenges.json`)
 
 ![Entries](screenshots/graphic-1.png)
 
-### Personal Status
+### 1.2 Personal Status
 
-The **Average Score** is the average of every Overall Score (`overallScore`) of each of the completed (Challenges whose `completedDate` property is different than `null`) challenges from my Challenges.
+The **Average Score** is the average of every Overall Score (`overallScore` property ) of each of the completed (Challenges whose `completedDate` property is different than `null`) challenges from my challenges (`MyChallenges.json`).
 
 ![Status](screenshots/personal-status.png)
 
-### Challenges to Complete
+### 1.3 Challenges to Complete
 
 The **Challenges to Complete** value is the number of all the challenges whose `completedDate` property is null.
 
 ![Challenges](screenshots/challenges-to-complete.png)
 
-## Team Challenges
+## 2. Team Challenges
 
-### Pending to Review
+![Team Challenges](screenshots/team-challenges.png)
+
+### 2.1 Pending to Review
 
 The challenges **Pending to Review** are shown according to the property `numberToReview` which is present on each item of the `TeamChallenges.json`
 
 ![Pending](screenshots/pending-1.png)
 ![Pending](screenshots/pending-2.png)
 
-### To be Completed
+### 2.2 Invited
+
+The `Invited` value can be taken from the `numberInvited` property.
+
+### 2.3 Entries
+
+The `Entries` value can be taken from the `numberOfEntries` property.
+
+### 2.4 Ellipsis Button
+
+The ellipsis button opens the following options. Don't worry, such buttons don't have any behavior:
+
+![Ellipsis](screenshots/contextual-menu.png)
+
+
+## 3. My Challenges
+
+![My Challenges](screenshots/my-challenges.png)
+
+### 3.1 Created By
+
+The `Created By` value can be taken from the `challengerFirstName` and `challengerLastName` properties.
+
+### 3.2 Average Score
+
+The `Average Score` value can be taken from the `overallScore` property.
+
+### 3.3 Invited
+
+The `Invited` value can be taken from the `modifiedDate` property.
+
+### 3.4 Completed Challenges
 
 **Challenges to be completed** can be calculated taking a look at the `completedDate` property. If it is `null`, then such challenge is still incomplete.
 
 ![Completed](screenshots/completed-date.png)
 ![Completed](screenshots/completed-date-2.png)
 
-### Complete Now Button
 
-The **Complete Now** button should appear for challenges that haven't been completed. Again, those are the challenges whose `completedDate` property is `null`.
 
-![Completed](screenshots/completed-date-2.png)
