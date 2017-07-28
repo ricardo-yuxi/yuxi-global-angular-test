@@ -69,9 +69,15 @@ The solution must be submitted and uploaded in your repository before Tuesday, A
 
 ## 9. Additional Notes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.6.
+### 9.1 Environment Tools
 
-### 9.1 Third-party libraries
+- This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.6.
+- Your Node version should be 6.10.0 at least
+- Your NPM version should be 3.10.0 at least
+
+> If you encounter issues setting up the base project, just upgrade your tools to the latest, that can help.
+
+### 9.2 Third-party libraries
 
 You are free to use third-party libraries as long as you have a good reason for it.
 
@@ -91,7 +97,7 @@ This holds general information for the whole application using graphics.
 
 ### 1.1 Entries to review
 
-This is the result of calculating the sum of all the entries (`numberOfEntries`) of all the Team Challenges (`TeamChallenges.json`)
+This is the result of calculating the sum of all the entries (`numberOfEntries` property) of all the Team Challenges (`TeamChallenges.json`)
 
 ![Entries](screenshots/graphic-1.png)
 
