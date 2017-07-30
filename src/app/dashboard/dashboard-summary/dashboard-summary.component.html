@@ -1,15 +1,9 @@
 <h3>Challenge Dashboard</h3>
 <div fxFlexFill fxLayout='row' fxLayoutAlign="space-around center">
   <md-card>
-    <div style="display: block">
-      <canvas baseChart
-                  [data]="doughnutChartData"
-                  [labels]="doughnutChartLabels"
-                  [chartType]="doughnutChartType"
-                  (chartHover)="chartHovered($event)"
-                  (chartClick)="chartClicked($event)"></canvas>
-    </div>
+    <number-of-entries-chart></number-of-entries-chart>
   </md-card>
-  <md-card>Simple card</md-card>
-
+  <md-card>
+    <average-score-chart></average-score-chart>
+  </md-card>
 </div>

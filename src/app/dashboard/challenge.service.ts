@@ -8,6 +8,7 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class ChallengeService {
   private teamChallengesUrl = 'https://raw.githubusercontent.com/H4isan/custom_libs/master/TeamChallenges.json';
+  private getMyChallengesUrl = 'https://raw.githubusercontent.com/H4isan/custom_libs/master/MyChallenges.json';
 
   constructor(
     private http: Http
@@ -16,6 +17,13 @@ export class ChallengeService {
   getTeamChallenges() {
     return this.http
       .get(this.teamChallengesUrl)
+      .map(this.extractData)
+      .catch(this.handleError);
+  }
+
+  getMyChallenges() {
+    return this.http
+      .get(this.getMyChallengesUrl)
       .map(this.extractData)
       .catch(this.handleError);
   }
