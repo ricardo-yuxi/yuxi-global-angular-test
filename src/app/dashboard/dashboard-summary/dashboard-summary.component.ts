@@ -1,3 +1,4 @@
+import { ChallengeService } from './../challenge.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardSummaryComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private challengeService: ChallengeService
+  ) { }
 
   ngOnInit() {
+  }
+
+  getTeamChallenges() {
+    this.challengeService.getTeamChallenges();
   }
 
 }
