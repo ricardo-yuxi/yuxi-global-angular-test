@@ -7,6 +7,7 @@ import { DashboardDatatableComponent } from './dashboard-datatable/dashboard-dat
 import { HttpModule } from "@angular/http";
 import { AverageScoreChartComponent } from './dashboard-summary/average-score-chart/average-score-chart.component';
 import { NumberOfEntriesChartComponent } from './dashboard-summary/number-of-entries-chart/number-of-entries-chart.component';
+import { TeamChallengesDatatableComponent } from './dashboard-datatable/team-challenges-datatable/team-challenges-datatable.component';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { NumberOfEntriesChartComponent } from './dashboard-summary/number-of-ent
   declarations: [DashboardSummaryComponent,
     DashboardDatatableComponent,
     AverageScoreChartComponent,
-    NumberOfEntriesChartComponent
+    NumberOfEntriesChartComponent,
+    TeamChallengesDatatableComponent
   ],
   exports: [
     DashboardSummaryComponent,

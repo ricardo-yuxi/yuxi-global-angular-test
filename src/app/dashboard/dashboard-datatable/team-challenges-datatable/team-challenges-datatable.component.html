@@ -1,0 +1,27 @@
+<input
+  type='text'
+  style='padding:8px;margin:15px auto;width:30%;'
+  placeholder='Type to filter the name column...'
+  (keyup)='updateFilter($event)'
+/>
+<ngx-datatable
+    #table
+    class="material"
+    [columns]="columns"
+    [columnMode]="'force'"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    [rowHeight]="'auto'"
+    [rows]="rows"
+    [limit]="10">
+    <ngx-datatable-column name="Name"></ngx-datatable-column>
+    <ngx-datatable-column name="Created By" prop="userFullName"></ngx-datatable-column>
+    <ngx-datatable-column name="Modified" prop="modifiedDate"></ngx-datatable-column>
+    <ngx-datatable-column name="Invited" prop="numberInvited"></ngx-datatable-column>
+    <ngx-datatable-column name="Entries" prop="numberOfEntries"></ngx-datatable-column>
+    <ngx-datatable-column name="To Review" prop="numberToReview">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        {{ value | date }}
+      </ng-template>
+    </ngx-datatable-column>
+  </ngx-datatable>

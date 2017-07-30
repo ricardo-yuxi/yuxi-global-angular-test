@@ -4,6 +4,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { ChartsModule } from 'ng2-charts';
+import { NgxDatatableModule } from "@swimlane/ngx-datatable/release";
 import {
 	MdMenuModule,
 	MdButtonModule,
@@ -16,6 +17,7 @@ import {
 		CommonModule,
 		FlexLayoutModule,
 		ChartsModule,
+		NgxDatatableModule,
 		MdButtonModule,
 		MdMenuModule,
 		MdCardModule,
@@ -27,6 +29,7 @@ import {
 		FooterComponent,
 		FlexLayoutModule,
 		ChartsModule,
+		NgxDatatableModule,
 		MdButtonModule,
 		MdMenuModule,
 		MdCardModule,
