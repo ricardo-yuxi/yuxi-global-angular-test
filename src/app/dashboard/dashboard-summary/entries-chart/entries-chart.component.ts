@@ -3,17 +3,17 @@ import { ChallengeService } from "../../challenge.service";
 import { BaseChartDirective } from "ng2-charts";
 
 @Component({
-  selector: 'number-of-entries-chart',
-  templateUrl: './number-of-entries-chart.component.html',
-  styleUrls: ['./number-of-entries-chart.component.css']
+  selector: 'entries-chart',
+  templateUrl: './entries-chart.component.html',
+  styleUrls: ['./entries-chart.component.css']
 })
-export class NumberOfEntriesChartComponent implements OnInit {
+export class EntriesChartComponent implements OnInit {
   public teamChallenges = [];
   // Doughnut
 
   @ViewChild(BaseChartDirective)
   public chart: BaseChartDirective;
-  public doughnutChartLabels:string[] = ['Number of entries'];
+  public doughnutChartLabels:string[] = ['Number to Review', 'Number of Entries'];
   public doughnutChartData:number[] = [];
   public doughnutChartType:string = 'doughnut';
  
@@ -39,16 +39,25 @@ export class NumberOfEntriesChartComponent implements OnInit {
     this.challengeService.getTeamChallenges()
       .subscribe(data => {
         this.getTeamChallenges = data;
-        this.doughnutChartData.push(this.calculateEntries(data));
+        this.doughnutChartData.push(this.numberOfEntries(data));
+        this.doughnutChartData.push(this.numberToReview(data));
         this.chart.chart.update();
       });
   }
 
-  calculateEntries(data) {
+  numberOfEntries(data) {
     let sum = data.reduce( (acc, item) => {
       return acc += +item.numberOfEntries;
     }, 0);
-    console.log('sum', sum);
+    console.log('Entries', sum);
+    return sum;
+  }
+
+  numberToReview(data) {
+    let sum = data.reduce( (acc, item) => {
+      return acc += +item.numberToReview;
+    }, 0);
+    console.log('toReview', sum);
     return sum;
   }
 

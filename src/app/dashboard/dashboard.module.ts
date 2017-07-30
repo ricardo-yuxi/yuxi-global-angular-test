@@ -6,7 +6,7 @@ import { SharedModule } from "../shared/shared.module";
 import { DashboardDatatableComponent } from './dashboard-datatable/dashboard-datatable.component';
 import { HttpModule } from "@angular/http";
 import { AverageScoreChartComponent } from './dashboard-summary/average-score-chart/average-score-chart.component';
-import { NumberOfEntriesChartComponent } from './dashboard-summary/number-of-entries-chart/number-of-entries-chart.component';
+import { EntriesChartComponent } from './dashboard-summary/entries-chart/entries-chart.component';
 import { TeamChallengesDatatableComponent } from './dashboard-datatable/team-challenges-datatable/team-challenges-datatable.component';
 
 @NgModule({
@@ -18,14 +18,14 @@ import { TeamChallengesDatatableComponent } from './dashboard-datatable/team-cha
   declarations: [DashboardSummaryComponent,
     DashboardDatatableComponent,
     AverageScoreChartComponent,
-    NumberOfEntriesChartComponent,
+    EntriesChartComponent,
     TeamChallengesDatatableComponent
   ],
   exports: [
     DashboardSummaryComponent,
     DashboardDatatableComponent,
     AverageScoreChartComponent,
-    NumberOfEntriesChartComponent
+    EntriesChartComponent
   ],
   providers: [ChallengeService]
 })
