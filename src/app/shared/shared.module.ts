@@ -6,7 +6,8 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import {
 	MdMenuModule,
 	MdButtonModule,
-	MdCardModule
+	MdCardModule,
+	MdTabsModule
 } from '@angular/material';
 
 @NgModule({
@@ -15,7 +16,8 @@ import {
 		FlexLayoutModule,
 		MdButtonModule,
 		MdMenuModule,
-		MdCardModule
+		MdCardModule,
+		MdTabsModule
 	],
 	declarations: [NavbarComponent, FooterComponent],
 	exports: [
@@ -24,7 +26,8 @@ import {
 		FlexLayoutModule,
 		MdButtonModule,
 		MdMenuModule,
-		MdCardModule
+		MdCardModule,
+		MdTabsModule
 	]
 })
 export class SharedModule { }
