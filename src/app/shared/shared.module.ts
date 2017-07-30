@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { ChartsModule } from 'ng2-charts';
 import {
 	MdMenuModule,
 	MdButtonModule,
@@ -14,6 +15,7 @@ import {
 	imports: [
 		CommonModule,
 		FlexLayoutModule,
+		ChartsModule,
 		MdButtonModule,
 		MdMenuModule,
 		MdCardModule,
@@ -24,6 +26,7 @@ import {
 		NavbarComponent,
 		FooterComponent,
 		FlexLayoutModule,
+		ChartsModule,
 		MdButtonModule,
 		MdMenuModule,
 		MdCardModule,
