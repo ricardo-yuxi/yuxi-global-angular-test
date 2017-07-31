@@ -5,7 +5,7 @@ import { DashboardSummaryComponent } from './dashboard-summary/dashboard-summary
 import { SharedModule } from "../shared/shared.module";
 import { DashboardDatatableComponent } from './dashboard-datatable/dashboard-datatable.component';
 import { HttpModule } from "@angular/http";
-import { AverageScoreChartComponent } from './dashboard-summary/average-score-chart/average-score-chart.component';
+import { PersonalChartComponent } from './dashboard-summary/personal-chart/personal-chart.component';
 import { EntriesChartComponent } from './dashboard-summary/entries-chart/entries-chart.component';
 import { TeamChallengesDatatableComponent } from './dashboard-datatable/team-challenges-datatable/team-challenges-datatable.component';
 import { MyChallengesDatatableComponent } from './dashboard-datatable/my-challenges-datatable/my-challenges-datatable.component';
@@ -18,7 +18,7 @@ import { MyChallengesDatatableComponent } from './dashboard-datatable/my-challen
   ],
   declarations: [DashboardSummaryComponent,
     DashboardDatatableComponent,
-    AverageScoreChartComponent,
+    PersonalChartComponent,
     EntriesChartComponent,
     TeamChallengesDatatableComponent,
     MyChallengesDatatableComponent
@@ -26,7 +26,7 @@ import { MyChallengesDatatableComponent } from './dashboard-datatable/my-challen
   exports: [
     DashboardSummaryComponent,
     DashboardDatatableComponent,
-    AverageScoreChartComponent,
+    PersonalChartComponent,
     EntriesChartComponent
   ],
   providers: [ChallengeService]

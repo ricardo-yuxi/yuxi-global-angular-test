@@ -3,17 +3,17 @@ import { BaseChartDirective } from "ng2-charts";
 import { ChallengeService } from "../../challenge.service";
 
 @Component({
-  selector: 'average-score-chart',
-  templateUrl: './average-score-chart.component.html',
-  styleUrls: ['./average-score-chart.component.css']
+  selector: 'personal-chart',
+  templateUrl: './personal-chart.component.html',
+  styleUrls: ['./personal-chart.component.css']
 })
-export class AverageScoreChartComponent implements OnInit {
+export class PersonalChartComponent implements OnInit {
   public myChallenges = [];
   // Doughnut
 
   @ViewChild(BaseChartDirective)
   public chart: BaseChartDirective;
-  public doughnutChartLabels:string[] = ['Average Score'];
+  public doughnutChartLabels:string[] = ['Challenges', 'To Complete'];
   public doughnutChartData:number[] = [];
   public doughnutChartType:string = 'doughnut';
 
@@ -21,6 +21,7 @@ export class AverageScoreChartComponent implements OnInit {
 
   ngOnInit() {
     this.getMyChallenges();
+    this.doughnutChartData = [0,0];
   }
 
   // events
@@ -36,17 +37,20 @@ export class AverageScoreChartComponent implements OnInit {
     this.challengeService.getMyChallenges()
       .subscribe(data => {
         this.myChallenges = data;
-        this.doughnutChartData.push(this.calculateAverageScore(data));
+        let challenges = this.myChallenges.length;
+        let to_complete = this.challengesCompleted(data);
+        this.doughnutChartData = [challenges, to_complete];
         this.chart.chart.update();
       });
   }
 
-  calculateAverageScore(data) {
-    let sum = data.reduce( (acc, item) => {
-      return acc += +item.overallScore;
-    }, 0);
-    let average = ( sum / data.length );
-    console.log('average',average);
-    return average;
+  challengesCompleted(data) {
+    let sum = 0;
+    data.map(challenge => {
+      if (challenge.completedDate === null) {
+        sum++;
+      }
+    });
+    return sum;
   }
 }
