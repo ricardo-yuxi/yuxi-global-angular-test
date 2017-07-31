@@ -13,7 +13,6 @@ export class MyChallengesDatatableComponent implements OnInit {
 
   columns = [
     { prop: 'challengeName' },
-    { prop: 'challengerFirstName' },
     { prop: 'modifiedDate' },
     { prop: 'overallScore' },
     { prop: 'completedDate' },
@@ -33,6 +32,7 @@ export class MyChallengesDatatableComponent implements OnInit {
       .subscribe(data => {
         // cache
         this.temp = [...data];
+        // push our inital complete list
         this.rows = data;
         // this.getCreatedBy(data);
       });

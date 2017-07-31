@@ -8,7 +8,8 @@ import { DatatableComponent } from "@swimlane/ngx-datatable/release";
   styleUrls: ['./team-challenges-datatable.component.css']
 })
 export class TeamChallengesDatatableComponent implements OnInit {
-  public rows = [];
+  public rows: Array<any> = [];
+  public temp: Array<any> = [];
 
   columns = [
     { prop: 'name' },
@@ -31,8 +32,25 @@ export class TeamChallengesDatatableComponent implements OnInit {
   getTeamChallenges() {
     this.challengeService.getTeamChallenges()
       .subscribe(data => {
+        // cache
+        this.temp = [...data];
+        // push our inital complete list
         this.rows = data;
       });
+  }
+
+  updateFilter(event) {
+    const val = event.target.value.toLowerCase();
+
+    // filter our data
+    const temp = this.temp.filter(function(d) {
+      return d.name.toLowerCase().indexOf(val) !== -1 || !val;
+    });
+
+    // update the rows
+    this.rows = temp;
+    // Whenever the filter changes, always go back to the first page
+    this.table.offset = 0;
   }
 
 }
