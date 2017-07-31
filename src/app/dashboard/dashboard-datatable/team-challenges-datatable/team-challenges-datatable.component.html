@@ -16,12 +16,16 @@
     [limit]="10">
     <ngx-datatable-column name="Name"></ngx-datatable-column>
     <ngx-datatable-column name="Created By" prop="userFullName"></ngx-datatable-column>
-    <ngx-datatable-column name="Modified" prop="modifiedDate"></ngx-datatable-column>
+    <ngx-datatable-column name="Modified" prop="modifiedDate">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        {{ value.split('T')[0] }}
+      </ng-template>
+    </ngx-datatable-column>
     <ngx-datatable-column name="Invited" prop="numberInvited"></ngx-datatable-column>
     <ngx-datatable-column name="Entries" prop="numberOfEntries"></ngx-datatable-column>
     <ngx-datatable-column name="To Review" prop="numberToReview">
       <ng-template let-value="value" ngx-datatable-cell-template>
-        {{ value | date }}
+        {{ value }}
       </ng-template>
     </ngx-datatable-column>
   </ngx-datatable>
