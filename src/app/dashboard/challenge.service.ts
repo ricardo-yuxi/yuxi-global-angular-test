@@ -14,14 +14,14 @@ export class ChallengeService {
     private http: Http
   ) { }
 
-  getTeamChallenges() {
+  getTeamChallenges(): Observable<any> {
     return this.http
       .get(this.teamChallengesUrl)
       .map(this.extractData)
       .catch(this.handleError);
   }
 
-  getMyChallenges() {
+  getMyChallenges(): Observable<any> {
     return this.http
       .get(this.getMyChallengesUrl)
       .map(this.extractData)

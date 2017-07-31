@@ -13,7 +13,7 @@ export class EntriesChartComponent implements OnInit {
 
   @ViewChild(BaseChartDirective)
   public chart: BaseChartDirective;
-  public doughnutChartLabels:string[] = ['Number to Review', 'Number of Entries'];
+  public doughnutChartLabels:string[] = ['Number of Entries','Number to Review'];
   public doughnutChartData:number[] = [];
   public doughnutChartType:string = 'doughnut';
  
@@ -24,6 +24,7 @@ export class EntriesChartComponent implements OnInit {
 
   ngOnInit() {
     this.getTeamChallenges();
+    this.doughnutChartData = [0,0];
   }
 
   // events
@@ -39,8 +40,9 @@ export class EntriesChartComponent implements OnInit {
     this.challengeService.getTeamChallenges()
       .subscribe(data => {
         this.getTeamChallenges = data;
-        this.doughnutChartData.push(this.numberOfEntries(data));
-        this.doughnutChartData.push(this.numberToReview(data));
+        let entries = this.numberOfEntries(data);
+        let toReview = this.numberToReview(data)
+        this.doughnutChartData = [entries, toReview];
         this.chart.chart.update();
       });
   }
@@ -49,7 +51,6 @@ export class EntriesChartComponent implements OnInit {
     let sum = data.reduce( (acc, item) => {
       return acc += +item.numberOfEntries;
     }, 0);
-    console.log('Entries', sum);
     return sum;
   }
 
@@ -57,7 +58,6 @@ export class EntriesChartComponent implements OnInit {
     let sum = data.reduce( (acc, item) => {
       return acc += +item.numberToReview;
     }, 0);
-    console.log('toReview', sum);
     return sum;
   }
 
