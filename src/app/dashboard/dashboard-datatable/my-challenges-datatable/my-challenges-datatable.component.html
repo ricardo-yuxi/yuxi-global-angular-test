@@ -1,0 +1,30 @@
+<input
+  type='text'
+  style='padding:8px;margin:15px auto;width:30%;'
+  placeholder='Type to filter the name column...'
+  (keyup)='updateFilter($event)'
+/>
+<ngx-datatable
+    #table
+    class="material"
+    [columns]="columns"
+    [columnMode]="'force'"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    [rowHeight]="'auto'"
+    [rows]="rows"
+    [limit]="10">
+    <ngx-datatable-column name="Title" prop="challengeName"></ngx-datatable-column>
+    <ngx-datatable-column name="Created By">
+      <ng-template let-row="row">
+        {{row.challengerFirstName }}
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Avg Score" prop="overallScore"></ngx-datatable-column>
+    <ngx-datatable-column name="Invited" prop="modifiedDate">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        {{ value | date }}
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Completed" prop="completedDate"></ngx-datatable-column>
+  </ngx-datatable>

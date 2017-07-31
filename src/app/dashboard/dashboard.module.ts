@@ -8,6 +8,7 @@ import { HttpModule } from "@angular/http";
 import { AverageScoreChartComponent } from './dashboard-summary/average-score-chart/average-score-chart.component';
 import { EntriesChartComponent } from './dashboard-summary/entries-chart/entries-chart.component';
 import { TeamChallengesDatatableComponent } from './dashboard-datatable/team-challenges-datatable/team-challenges-datatable.component';
+import { MyChallengesDatatableComponent } from './dashboard-datatable/my-challenges-datatable/my-challenges-datatable.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { TeamChallengesDatatableComponent } from './dashboard-datatable/team-cha
     DashboardDatatableComponent,
     AverageScoreChartComponent,
     EntriesChartComponent,
-    TeamChallengesDatatableComponent
+    TeamChallengesDatatableComponent,
+    MyChallengesDatatableComponent
   ],
   exports: [
     DashboardSummaryComponent,
