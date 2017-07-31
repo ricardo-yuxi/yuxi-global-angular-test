@@ -8,9 +8,8 @@ import { ChallengeService } from "../../challenge.service";
   styleUrls: ['./my-challenges-datatable.component.css']
 })
 export class MyChallengesDatatableComponent implements OnInit {
-  public rows: Array<any>;
-  public rows2: Array<any>;
-  public temp: Array<any>;
+  public rows: Array<any> = [];
+  public temp: Array<any> = [];
 
   columns = [
     { prop: 'challengeName' },
@@ -32,23 +31,23 @@ export class MyChallengesDatatableComponent implements OnInit {
   getMyChallenges() {
     this.challengeService.getMyChallenges()
       .subscribe(data => {
+        // cache
+        this.temp = [...data];
         this.rows = data;
-        this.rows2 = data;
         // this.getCreatedBy(data);
       });
   }
 
   updateFilter(event) {
-    this.temp = []
     const val = event.target.value.toLowerCase();
 
     // filter our data
-    this.temp = this.rows2.filter(function(d) {
-      return d.name.toLowerCase().indexOf(val) !== -1 || !val;
+    const temp = this.temp.filter(function(d) {
+      return d.challengeName.toLowerCase().indexOf(val) !== -1 || !val;
     });
 
     // update the rows
-    this.rows = this.temp;
+    this.rows = temp;
     // Whenever the filter changes, always go back to the first page
     this.table.offset = 0;
   }
