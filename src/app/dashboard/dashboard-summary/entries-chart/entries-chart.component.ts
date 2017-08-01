@@ -9,11 +9,12 @@ import { BaseChartDirective } from "ng2-charts";
 })
 export class EntriesChartComponent implements OnInit {
   public teamChallenges = [];
+  public entriesToReview: number = 0;
   // Doughnut
 
   @ViewChild(BaseChartDirective)
   public chart: BaseChartDirective;
-  public doughnutChartLabels:string[] = ['Number of Entries','Number to Review'];
+  public doughnutChartLabels:string[] = ['Entries number','Entries to Review'];
   public doughnutChartData:number[] = [];
   public doughnutChartType:string = 'doughnut';
  
@@ -41,8 +42,8 @@ export class EntriesChartComponent implements OnInit {
       .subscribe(data => {
         this.getTeamChallenges = data;
         let entries = this.numberOfEntries(data);
-        let toReview = this.numberToReview(data)
-        this.doughnutChartData = [entries, toReview];
+        this.entriesToReview = this.numberToReview(data)
+        this.doughnutChartData = [entries, this.entriesToReview];
         this.chart.chart.update();
       });
   }
