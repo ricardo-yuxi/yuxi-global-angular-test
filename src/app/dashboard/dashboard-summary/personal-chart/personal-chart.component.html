@@ -3,7 +3,10 @@
     <h2 class="title">Personal Status</h2>
     <md-card class="average-score">{{ averageScore }}%</md-card>
   </div>
-  <div style="display: block">
+  <div style="display: block; position: relative;">
+    <small style="position: absolute; margin: 45% 38%; text-align: center">
+      {{ challengesToComplete }} Challenges to complete
+    </small>
     <canvas baseChart
                 [data]="doughnutChartData"
                 [labels]="doughnutChartLabels"

@@ -10,6 +10,7 @@ import { ChallengeService } from "../../challenge.service";
 export class PersonalChartComponent implements OnInit {
   public myChallenges = [];
   public averageScore: number = 0;
+  public challengesToComplete: number = 0;
   // Doughnut
 
   @ViewChild(BaseChartDirective)
@@ -39,9 +40,9 @@ export class PersonalChartComponent implements OnInit {
       .subscribe(data => {
         this.myChallenges = data;
         let challenges = this.myChallenges.length;
-        let to_complete = this.challengesCompleted(data);
+        this.challengesToComplete = this.challengesCompleted(data);
         this.averageScore = this.getAverageScore(data);
-        this.doughnutChartData = [challenges, to_complete];
+        this.doughnutChartData = [challenges, this.challengesToComplete];
         this.chart.chart.update();
       });
   }
