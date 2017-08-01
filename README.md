@@ -6,6 +6,7 @@
 * [Material Desing](https://material.angular.io/)
 * [Ng2 Charts](https://valor-software.com/ng2-charts/)
 * [Flex Layout](https://github.com/angular/flex-layout)
+* [ngx-datatable](https://github.com/swimlane/ngx-datatable)
 
 
 ## 1. Introduction
