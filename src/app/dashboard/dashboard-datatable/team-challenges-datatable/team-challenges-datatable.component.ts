@@ -1,4 +1,3 @@
-// import { ShowLinePipe } from './pipes/show-line.pipe';
 import { ChallengeService } from './../../challenge.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { DatatableComponent } from "@swimlane/ngx-datatable/release";

@@ -20,11 +20,19 @@
         {{ row.challengerFirstName }} {{ row.challengerLastName }}
       </ng-template>
     </ngx-datatable-column>
-    <ngx-datatable-column name="Avg Score" prop="overallScore"></ngx-datatable-column>
+    <ngx-datatable-column name="Avg Score" prop="overallScore">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        {{ value | showLine }}
+      </ng-template>
+    </ngx-datatable-column>
     <ngx-datatable-column name="Invited" prop="modifiedDate">
       <ng-template let-value="value" ngx-datatable-cell-template>
         {{ value.split('T')[0] }}
       </ng-template>
     </ngx-datatable-column>
-    <ngx-datatable-column name="Completed" prop="completedDate"></ngx-datatable-column>
+    <ngx-datatable-column name="Completed" prop="completedDate">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        {{ value.split('T')[0] }}
+      </ng-template>
+    </ngx-datatable-column>
   </ngx-datatable>
