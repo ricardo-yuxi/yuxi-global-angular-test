@@ -14,7 +14,7 @@
     [rowHeight]="'auto'"
     [rows]="rows"
     [limit]="10">
-    <ngx-datatable-column name="Name"></ngx-datatable-column>
+    <ngx-datatable-column name="Name" [width]="500"></ngx-datatable-column>
     <ngx-datatable-column name="Created By" prop="userFullName"></ngx-datatable-column>
     <ngx-datatable-column name="Modified" prop="modifiedDate">
       <ng-template let-value="value" ngx-datatable-cell-template>
