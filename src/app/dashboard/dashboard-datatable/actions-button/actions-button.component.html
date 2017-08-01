@@ -1,0 +1,32 @@
+<button md-icon-button [mdMenuTriggerFor]="menu">
+  <md-icon>more_vert</md-icon>
+</button>
+<md-menu #menu="mdMenu">
+  <button md-menu-item>
+    <md-icon>trophy</md-icon>
+    <span>View LeaderBoard</span>
+  </button>
+  <button md-menu-item>
+    <md-icon>voicemail</md-icon>
+    <span>Send Participant Reminder</span>
+  </button>
+  <button md-menu-item>
+    <md-icon>notifications_off</md-icon>
+    <span>Send Reviewer Reminder</span>
+  </button>
+  <button md-menu-item>
+    <md-icon>notifications_off</md-icon>
+    <span>Copy Challenge</span>
+  </button>
+  <button md-menu-item>
+    <md-icon>notifications_off</md-icon>
+    <span>Edit Challenge</span>
+  </button>
+  <button md-menu-item>
+    <md-icon>notifications_off</md-icon>
+    <span>Delete Challenge</span>
+  </button>
+  <button md-menu-item>
+    <md-checkbox>Email me when an entry is submitted</md-checkbox>
+  </button>
+</md-menu>

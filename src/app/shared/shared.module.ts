@@ -9,7 +9,9 @@ import {
 	MdMenuModule,
 	MdButtonModule,
 	MdCardModule,
-	MdTabsModule
+	MdTabsModule,
+	MdIconModule,
+	MdCheckboxModule
 } from '@angular/material';
 
 @NgModule({
@@ -21,7 +23,9 @@ import {
 		MdButtonModule,
 		MdMenuModule,
 		MdCardModule,
-		MdTabsModule
+		MdTabsModule,
+		MdIconModule,
+		MdCheckboxModule
 	],
 	declarations: [
 		NavbarComponent,
@@ -36,7 +40,9 @@ import {
 		MdButtonModule,
 		MdMenuModule,
 		MdCardModule,
-		MdTabsModule
+		MdTabsModule,
+		MdIconModule,
+		MdCheckboxModule
 	]
 })
 export class SharedModule { }

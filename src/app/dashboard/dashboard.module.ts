@@ -10,6 +10,7 @@ import { PersonalChartComponent } from './dashboard-summary/personal-chart/perso
 import { EntriesChartComponent } from './dashboard-summary/entries-chart/entries-chart.component';
 import { TeamChallengesDatatableComponent } from './dashboard-datatable/team-challenges-datatable/team-challenges-datatable.component';
 import { MyChallengesDatatableComponent } from './dashboard-datatable/my-challenges-datatable/my-challenges-datatable.component';
+import { ActionsButtonComponent } from './dashboard-datatable/actions-button/actions-button.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { MyChallengesDatatableComponent } from './dashboard-datatable/my-challen
     EntriesChartComponent,
     TeamChallengesDatatableComponent,
     MyChallengesDatatableComponent,
-    ShowLinePipe
+    ShowLinePipe,
+    ActionsButtonComponent
   ],
   exports: [
     DashboardSummaryComponent,
