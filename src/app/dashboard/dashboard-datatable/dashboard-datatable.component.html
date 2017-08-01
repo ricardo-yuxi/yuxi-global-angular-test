@@ -1,8 +1,23 @@
-<md-tab-group>
-  <md-tab label="Team Challenges">
-    <team-challenges-datatable></team-challenges-datatable>
-  </md-tab>
-  <md-tab label="My Challenges">
-    <my-challenges-datatable></my-challenges-datatable>
-  </md-tab>
-</md-tab-group>
+<div style="position: relative">
+  <md-tab-group>
+    <md-tab label="Team Challenges">
+      <team-challenges-datatable></team-challenges-datatable>
+    </md-tab>
+    <md-tab label="My Challenges">
+      <my-challenges-datatable></my-challenges-datatable>
+    </md-tab>
+    <!-- <md-tab>
+      <ng-template md-tab-label>
+      </ng-template>
+    </md-tab> -->
+  </md-tab-group>
+  <div style="position: absolute; right: 22px; top: 6px; z-index: 2;">
+    <button md-raised-button >New Challenge</button>
+  </div>
+  <div style="position: absolute; right: 250px; top: 15px; z-index: 2;">
+    To Be Completed:
+    <span class="to-review">
+      {{ challengesToComplete }}
+    </span>
+  </div>
+</div>
