@@ -23,7 +23,10 @@ import {
 		MdCardModule,
 		MdTabsModule
 	],
-	declarations: [NavbarComponent, FooterComponent],
+	declarations: [
+		NavbarComponent,
+		FooterComponent
+	],
 	exports: [
 		NavbarComponent,
 		FooterComponent,

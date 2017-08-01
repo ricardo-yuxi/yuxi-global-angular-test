@@ -1,3 +1,4 @@
+// import { ShowLinePipe } from './pipes/show-line.pipe';
 import { ChallengeService } from './../../challenge.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { DatatableComponent } from "@swimlane/ngx-datatable/release";
@@ -51,6 +52,12 @@ export class TeamChallengesDatatableComponent implements OnInit {
     this.rows = temp;
     // Whenever the filter changes, always go back to the first page
     this.table.offset = 0;
+  }
+
+  getCellClass({ row, column, value }): any {
+    return {
+      'to-review': value > 0
+    };
   }
 
 }

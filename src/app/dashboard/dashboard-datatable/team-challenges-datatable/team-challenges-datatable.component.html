@@ -22,10 +22,16 @@
       </ng-template>
     </ngx-datatable-column>
     <ngx-datatable-column name="Invited" prop="numberInvited"></ngx-datatable-column>
-    <ngx-datatable-column name="Entries" prop="numberOfEntries"></ngx-datatable-column>
-    <ngx-datatable-column name="To Review" prop="numberToReview">
+    <ngx-datatable-column name="Entries" prop="numberOfEntries">
       <ng-template let-value="value" ngx-datatable-cell-template>
-        {{ value }}
+        {{ value | showLine }}
       </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="To Review" prop="numberToReview">
+    <ng-template let-value="value" ngx-datatable-cell-template>
+      <span [class.to-review]="value > 0">
+        {{ value | showLine }}
+      </span>
+    </ng-template>
     </ngx-datatable-column>
   </ngx-datatable>

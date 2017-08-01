@@ -1,3 +1,4 @@
+import { ShowLinePipe } from './pipes/show-line.pipe';
 import { ChallengeService } from './challenge.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -21,7 +22,8 @@ import { MyChallengesDatatableComponent } from './dashboard-datatable/my-challen
     PersonalChartComponent,
     EntriesChartComponent,
     TeamChallengesDatatableComponent,
-    MyChallengesDatatableComponent
+    MyChallengesDatatableComponent,
+    ShowLinePipe
   ],
   exports: [
     DashboardSummaryComponent,
