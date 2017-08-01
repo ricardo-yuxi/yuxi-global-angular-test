@@ -5,7 +5,7 @@ import { BaseChartDirective } from "ng2-charts";
 @Component({
   selector: 'entries-chart',
   templateUrl: './entries-chart.component.html',
-  styleUrls: ['./entries-chart.component.css']
+  styleUrls: ['./entries-chart.component.scss']
 })
 export class EntriesChartComponent implements OnInit {
   public teamChallenges = [];

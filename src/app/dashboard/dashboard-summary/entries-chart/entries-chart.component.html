@@ -1,8 +1,19 @@
-<div style="display: block">
-  <canvas baseChart
-              [data]="doughnutChartData"
-              [labels]="doughnutChartLabels"
-              [chartType]="doughnutChartType"
-              (chartHover)="chartHovered($event)"
-              (chartClick)="chartClicked($event)"></canvas>
+<div fxLayout='row' fxLayoutAlign="space-around">
+  <div fxLayout="column" fxFlex="30">
+    <h2 class="title">Welcome Jam</h2>
+    <p>It looks like you have some entries to show</p>
+    <p>
+      Browse you Team Challenges tab below to continue
+      reviewing sumbissions, or your My Challenges tab
+      to complete challenges.
+    </p>
+  </div>
+  <div style="display: block">
+    <canvas baseChart
+                [data]="doughnutChartData"
+                [labels]="doughnutChartLabels"
+                [chartType]="doughnutChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+  </div>
 </div>
