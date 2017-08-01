@@ -32,6 +32,9 @@
     </ngx-datatable-column>
     <ngx-datatable-column name="Completed" prop="completedDate">
       <ng-template let-value="value" ngx-datatable-cell-template>
+        <button class="complete" *ngIf="!value" md-raised-button>
+          Complete Now
+        </button>
         {{ value.split('T')[0] }}
       </ng-template>
     </ngx-datatable-column>
