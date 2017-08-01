@@ -9,6 +9,7 @@ import { ChallengeService } from "../../challenge.service";
 })
 export class PersonalChartComponent implements OnInit {
   public myChallenges = [];
+  public averageScore: number = 0;
   // Doughnut
 
   @ViewChild(BaseChartDirective)
@@ -39,6 +40,7 @@ export class PersonalChartComponent implements OnInit {
         this.myChallenges = data;
         let challenges = this.myChallenges.length;
         let to_complete = this.challengesCompleted(data);
+        this.averageScore = this.getAverageScore(data);
         this.doughnutChartData = [challenges, to_complete];
         this.chart.chart.update();
       });
@@ -52,5 +54,19 @@ export class PersonalChartComponent implements OnInit {
       }
     });
     return sum;
+  }
+
+  getAverageScore(data) {
+    let completed = 0
+    let challenges = data.map(challenge => {
+     if (challenge.completedDate !== null) {
+        completed++;
+      }
+    });
+    let sum = data.reduce( (acc, item) => {
+      return acc += +item.overallScore;
+    }, 0);
+    let average = (sum / completed).toFixed(2);
+    return +average;
   }
 }

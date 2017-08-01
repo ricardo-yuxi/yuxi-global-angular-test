@@ -1,0 +1,14 @@
+.summay-wrapper, .title {
+  font-weight: 300;
+}
+
+.summay-wrapper, .average-score {
+  color: #3498db;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.summay-wrapper, .personal-card {
+  padding-right: 10px;
+  border-right: 1px solid rgba(0, 0, 0, .14);
+}

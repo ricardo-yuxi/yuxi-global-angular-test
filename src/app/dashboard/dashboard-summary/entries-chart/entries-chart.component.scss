@@ -1,3 +1,8 @@
 .summay-wrapper, .title {
   font-weight: 300;
 }
+
+.summay-wrapper, .entries-card {
+  padding-right: 10px;
+  border-right: 1px solid rgba(0, 0, 0, .14);
+}
