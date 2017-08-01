@@ -1,5 +1,13 @@
 # Yuxi Global - Angular Test
 
+
+## Adicional Dependencies
+
+* [Material Desing](https://material.angular.io/)
+* [Ng2 Charts](https://valor-software.com/ng2-charts/)
+* [Flex Layout](https://github.com/angular/flex-layout)
+
+
 ## 1. Introduction
 
 In this test you will be asked to build a set of functionalities in Angular. You will be provided a set of **mockups** and a **base project** we have already setup for you in this repository. 
